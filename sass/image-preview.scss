@@ -1,0 +1,47 @@
+.image-preview {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: black;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  animation: fadein .5s ease-in;
+  
+  @keyframes fadein {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+  
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  video, img {
+    vertical-align: middle;
+    max-width: 100%;
+  }
+  
+  .glyphicon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: white;
+    opacity: .6;
+  }
+  
+  .inset {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
