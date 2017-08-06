@@ -1,0 +1,51 @@
+.header .active {
+  font-weight: bold; }
+
+.image-preview {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: inline-block;
+  background-color: black;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+  animation: fadein .5s ease-in; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .image-preview:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .image-preview video, .image-preview img {
+    vertical-align: middle;
+    max-width: 100%; }
+  .image-preview .glyphicon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: white;
+    opacity: .6; }
+  .image-preview .inset {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center; }
+
+.black {
+  color: black; }
+
+img, video {
+  max-width: 100%; }
+
+.topic {
+  text-align: center; }
